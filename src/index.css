@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-color: #3d373c;
+  --green-color: #2f9331;
+  --blue-color: #477385;
+  --brown-color: #926f44;
+  --lemon-color: #8bcf21;
+  --light-brown-color: #c19978;
+  --light-blue-color: #83d2e4;
+  --cream-color: #e5d29f;
+  --white-color: #e7e0db;
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--lemon-color);
+  font-family: 'Patrick Hand', cursive;
+}
