@@ -21,11 +21,15 @@ export default function LocationCard({ location }) {
         </span>
       </div>
 
-      <ShowCharactersButton
-        handleClick={handleClick}
-        showCharacters={showCharacters}
-        type="residents"
-      />
+      {residents.length > 0 ? (
+        <ShowCharactersButton
+          handleClick={handleClick}
+          showCharacters={showCharacters}
+          type="residents"
+        />
+      ) : (
+        <span className="mt-2 text-center bg-blackColor text-blueColor">No residents</span>
+      )}
 
       {showCharacters && listOfCharacters(residents)}
     </Card>

@@ -67,7 +67,7 @@ export default function SearchCharacters() {
       </div>
       {hasSearched &&
         (error ? (
-          'not found'
+          <span className="mt-6 w-full block text-center">Nothing found</span>
         ) : (
           <>
             {info && (

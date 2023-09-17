@@ -5,7 +5,7 @@ import CharacterCard from './CharacterCard';
 import SectionContainer from './SectionContainer';
 
 export default function CharactersContainer() {
-  const { results } = useContext(CharactersContext);
+  const { results, info } = useContext(CharactersContext);
 
   return (
     <>
@@ -15,6 +15,9 @@ export default function CharactersContainer() {
         Search characters
       </Link>
       <SectionContainer context={CharactersContext} title="characters">
+        <span className="text-center w-full">
+          Total of <b>{info.count}</b> characters
+        </span>
         {!results
           ? 'loading'
           : results?.map((item) => <CharacterCard key={item.id} character={item} />)}

@@ -7,7 +7,9 @@ export default function SectionContainer({ children, context, title = undefined 
 
   return (
     <div className="my-4 flex flex-col gap-4">
-      <Paginator handleClick={handleClick} page={page} paginatorInfo={paginatorInfo} />
+      {paginatorInfo && (
+        <Paginator handleClick={handleClick} page={page} paginatorInfo={paginatorInfo} />
+      )}
       {title && (
         <h2 className="text-center tracking-widest text-4xl font-semibold underline">
           List of {title}
